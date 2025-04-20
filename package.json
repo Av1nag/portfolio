@@ -1,0 +1,28 @@
+{
+  "name": "avinag-portfolio",
+  "version": "1.0.0",
+  "description": "A Professional portfolio of myself",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "format": "prettier --write '**/*.{ts,tsx,js,json,css,md,html}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Avinag",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "@typescript-eslint/utils": "^8.29.0",
+    "eslint": "^9.24.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1",
+    "vite": "^6.2.6"
+  }
+}
