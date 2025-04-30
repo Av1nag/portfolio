@@ -1,0 +1,42 @@
+.introduction-container {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.introduction-container img {
+  width: 26.25rem;
+  object-fit: contain;
+}
+
+.wave {
+  font-family: 'Inter Bold';
+  font-size: 2.25rem;
+  color: #ffffff;
+}
+
+.name {
+  font-family: 'Inter Bold';
+  font-size: 6rem;
+  background: linear-gradient(to right, #ffffff, #999999);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.professional-description {
+  font-family: 'Inter Medium';
+  color: #ffffff;
+  font-size: 4rem;
+}
+
+.heading {
+  font-family: 'Inter ExtraBold';
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
