@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Avinag Udayagiri — Frontend Developer specializing in Angular, TypeScript, Ionic, and cross-platform mobile.">
-  <title>Avinag Udayagiri — Frontend Developer</title>
+  <meta name="description" content="Avinag Udayagiri — Full-stack developer building web and mobile apps with React, Angular, Django, Node.js, and PostgreSQL.">
+  <title>Avinag Udayagiri — Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -264,8 +264,25 @@
       animation: node-pulse 3s ease-in-out infinite;
     }
 
-    .stream-node:nth-child(2) { left: 28%; animation-delay: -0.5s; }
-    .stream-node:nth-child(3) { left: 64%; animation-delay: -1.3s; }
+    .stream-node.sn-1 { left: 12%; animation-delay: 0s; }
+    .stream-node.sn-2 { left: 50%; animation-delay: -1s; }
+    .stream-node.sn-3 { left: 88%; animation-delay: -2s; }
+
+    .stream-labels {
+      position: relative;
+      width: min(440px, 100%);
+      height: 1rem;
+      margin: -2.6rem 0 3rem;
+      font-family: var(--f-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+    }
+
+    .stream-labels span {
+      position: absolute;
+      transform: translateX(-50%);
+    }
 
     @keyframes node-pulse {
       0%, 100% {
@@ -293,11 +310,11 @@
       animation: dot-flow 3s linear infinite;
     }
 
-    .stream-dot:nth-child(4)  { animation-delay:  0s;     }
-    .stream-dot:nth-child(5)  { animation-delay: -0.6s;   }
-    .stream-dot:nth-child(6)  { animation-delay: -1.2s;   }
-    .stream-dot:nth-child(7)  { animation-delay: -1.8s;   }
-    .stream-dot:nth-child(8)  { animation-delay: -2.4s;   }
+    .stream-dot:nth-child(5)  { animation-delay:  0s;     }
+    .stream-dot:nth-child(6)  { animation-delay: -0.6s;   }
+    .stream-dot:nth-child(7)  { animation-delay: -1.2s;   }
+    .stream-dot:nth-child(8)  { animation-delay: -1.8s;   }
+    .stream-dot:nth-child(9)  { animation-delay: -2.4s;   }
 
     @keyframes dot-flow {
       0%   { left: 0%;    opacity: 0; }
@@ -511,6 +528,23 @@
       margin-top: 0.75rem;
     }
 
+    .tl-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 1rem;
+    }
+
+    .tl-stack + .tl-badge { margin-top: 0.9rem; }
+
+    .edu-card {
+      margin-top: 3.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.4rem 1.5rem;
+    }
+
     /* ─── SKILLS ─── */
     .skills-grid {
       display: grid;
@@ -663,6 +697,11 @@
     }
 
     .project-link:hover { color: var(--accent); }
+
+    .project-links {
+      display: flex;
+      gap: 1.25rem;
+    }
 
     /* ─── CONTACT ─── */
     #contact { text-align: left; }
@@ -821,8 +860,8 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -834,38 +873,44 @@
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </div>
 
 <!-- ─── HERO ─── -->
 <section id="hero">
-  <p class="hero-eyebrow">Frontend Developer · Hyderabad, IN</p>
+  <p class="hero-eyebrow">Full-Stack Developer · Hyderabad, IN</p>
   <h1 class="hero-name">
     AVINAG
     <span class="surname">UDAYAGIRI</span>
   </h1>
   <p class="hero-sub">
-    I build apps that <strong>teachers, students, and ops teams</strong> use every day — fast, reliable, and easy to navigate. From <strong>AI assessment platforms</strong> to <strong>kids' learning apps</strong>, I own the frontend end-to-end.
+    I build web and mobile products across the whole stack — <strong>React and Angular</strong> on the front, <strong>Django, Node.js, and PostgreSQL</strong> behind them. My work is used by <strong>3,000+ teachers</strong> and <strong>1,200+ employees</strong> every day.
   </p>
 
-  <!-- Signature: signal stream -->
+  <!-- Signature: request flowing UI → API → DB -->
   <div class="stream" aria-hidden="true">
     <div class="stream-line"></div>
-    <div class="stream-node"></div>
-    <div class="stream-node"></div>
+    <div class="stream-node sn-1"></div>
+    <div class="stream-node sn-2"></div>
+    <div class="stream-node sn-3"></div>
     <div class="stream-dot"></div>
     <div class="stream-dot"></div>
     <div class="stream-dot"></div>
     <div class="stream-dot"></div>
     <div class="stream-dot"></div>
   </div>
+  <div class="stream-labels" aria-hidden="true">
+    <span style="left:12%">UI</span>
+    <span style="left:50%">API</span>
+    <span style="left:88%">DB</span>
+  </div>
 
   <div class="hero-ctas">
-    <a href="#experience" class="btn btn-primary">View My Work</a>
-    <a href="Avinag_Udayagiri.pdf" class="btn btn-ghost" download>Download Resume</a>
+    <a href="#projects" class="btn btn-primary">View My Work</a>
+    <a href="Avinag_Udayagiri.pdf" class="btn btn-ghost" download="Avinag_Udayagiri_Resume.pdf">Download Resume</a>
   </div>
 </section>
 
@@ -876,30 +921,34 @@
   <div class="about-grid">
     <div class="about-text fade-in">
       <p>
-        Frontend developer focused on building products that feel <strong>polished</strong> and hold up under real use. I work across the interface layer — from designing <strong>shared component libraries</strong> that keep teams consistent, to wiring up the data flows that keep apps responsive.
+        Full-stack developer with <strong>3.5 years of experience</strong>, including internships, building web and mobile apps end to end — from the screens people use down to the APIs and databases that power them.
       </p>
       <p>
-        I've built <span class="hl">40+ reusable UI components</span> used across <span class="hl">5 products</span>, cutting development time by <span class="hl">~25%</span>. I care about code that other developers can pick up easily, and interfaces that stay out of the user's way.
+        At <strong>Phenom</strong>, I work across the <strong>React frontend and Django backend</strong> of an HR platform used by <span class="hl">1,200+ employees</span> — shipping features, tightening attendance data, and raising test coverage on the work-records module to <span class="hl">80%+</span>.
       </p>
       <p>
-        I've shipped across <strong>edtech, gaming, and social networking</strong> — each with different users, different constraints, and a different definition of done. That range has made me quick to adapt and faster at understanding what a product actually needs.
+        Before that I built the front end of an <strong>AI platform used by 3,000+ teachers across 600+ schools</strong>, built <span class="hl">10+ enterprise APIs</span> on Azure API Management, and released apps on <strong>Google Play and the App Store</strong>.
       </p>
       <p>
-        I've also contributed to deploying apps to both the <strong>Google Play Store and Apple App Store</strong>, handling the release process for production mobile builds.
+        Outside work I build and self-host my own products — like <strong>Worklog</strong>, a multi-user Node.js and PostgreSQL app I run on my own Linux server.
       </p>
     </div>
     <div class="stat-stack fade-in">
       <div class="stat-card">
-        <div class="stat-number">3+</div>
-        <div class="stat-desc">Years building production frontend across web and mobile</div>
+        <div class="stat-number">3,000+</div>
+        <div class="stat-desc">Teachers across 600+ schools using the AI platform I built the front end for</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">40+</div>
-        <div class="stat-desc">Reusable components built across 5 projects</div>
+        <div class="stat-number">1,200+</div>
+        <div class="stat-desc">Employees relying on the HR platform I build across React and Django</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">~25%</div>
-        <div class="stat-desc">Development time saved through the shared component library</div>
+        <div class="stat-number">220+</div>
+        <div class="stat-desc">Security vulnerabilities resolved in frontend dependencies without disrupting the setup</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">10+</div>
+        <div class="stat-desc">Enterprise APIs connecting SAP, Salesforce, Coupa, and ServiceNow</div>
       </div>
     </div>
   </div>
@@ -912,95 +961,69 @@
 
   <div class="timeline">
     <div class="tl-item fade-in">
-      <p class="tl-period">Dec 2024 — Present &nbsp;·&nbsp; Hyderabad</p>
-      <p class="tl-company">OAKS Solutions <span style="font-size:0.8rem;color:var(--text-muted);font-family:var(--f-mono);font-weight:400;">· SIYA AI &amp; products</span></p>
-      <p class="tl-role">Frontend Developer</p>
+      <p class="tl-period">Aug 2026 — Present &nbsp;·&nbsp; Hyderabad</p>
+      <p class="tl-company">Phenom</p>
+      <p class="tl-role">Full Stack Engineer (Product Development Engineer I)</p>
       <ul class="tl-bullets">
-        <li><strong>Core frontend engineer</strong> on <strong>SIYA AI</strong> — an AI-graded school assessment platform for teachers across <strong>grades 6–12</strong>. Built the entire teacher-facing product from scratch, end-to-end.</li>
-        <li>Owned core product features from the ground up — giving teachers everything they need to build, manage, and share assessments with students.</li>
-        <li>Cut the time teachers spend on a key workflow from <span class="hl">~4 minutes to ~1 minute</span>, and significantly reduced app load time through targeted performance improvements.</li>
-        <li>Modernized the app architecture to improve <strong>responsiveness</strong> and <strong>long-term maintainability</strong>.</li>
-        <li>Built <strong>PEEKAZOO</strong> — a kids' edutainment app — from the ground up; <strong>top contributor</strong>. Shaped the core experience children interact with, from content loading to in-app gameplay.</li>
-        <li>Contributed across <strong>TITLI</strong>, <strong>TOPTRIX</strong>, <strong>BGR/TRIPCARD</strong>, and <strong>MAVRICKS</strong> — admin dashboards, school management, fleet ops, and multiplayer game UIs.</li>
-        <li>Contributed to deploying apps to both the <strong>Google Play Store and Apple App Store</strong> for production releases.</li>
+        <li>Build features and fix bugs across the <strong>React frontend and Django backend</strong>, including the API that summarizes worked hours, expected hours, overtime, and shortfalls for all <span class="hl">1,200+ employees</span>.</li>
+        <li>Raised code quality with automated <strong>test-coverage and code-quality checks</strong>, and wrote tests that took the work-records module to <span class="hl">80%+ coverage</span>.</li>
+        <li>Resolved <span class="hl">220+ security vulnerabilities</span> in the frontend's dependencies without disrupting the existing setup.</li>
+        <li>Optimized code by removing redundant logic and unnecessary API calls, and work with my manager on scoping and design decisions to reduce delivery risk.</li>
       </ul>
-      <span class="tl-badge">★ Employee of the Month — April 2025</span>
+      <div class="tl-stack">
+        <span class="stack-tag">React</span><span class="stack-tag">Vite</span><span class="stack-tag">Django</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Docker</span><span class="stack-tag">Vitest</span><span class="stack-tag">SonarQube</span>
+      </div>
     </div>
 
     <div class="tl-item fade-in">
-      <p class="tl-period">May 2024 — Dec 2024 &nbsp;·&nbsp; Chennai (Remote)</p>
-      <p class="tl-company">Clikkin</p>
-      <p class="tl-role">Angular Developer (Intern) → React Native Developer</p>
+      <p class="tl-period">Dec 2024 — Jul 2026 &nbsp;·&nbsp; Hyderabad</p>
+      <p class="tl-company">OAKS Solutions</p>
+      <p class="tl-role">Frontend Engineer</p>
       <ul class="tl-bullets">
-        <li>Built features for <strong>VIVADA</strong> — an anti-misinformation platform — including interactive charts that help users understand how content spreads across social networks.</li>
-        <li>Shipped <strong>The Startup Club</strong> — a mobile networking app — delivering a smooth, consistent experience across <strong>iOS and Android</strong>.</li>
-        <li>Worked closely with product and design to turn requirements into <strong>clean, reusable interfaces</strong> across both roles.</li>
+        <li>Built the front end of an <strong>AI-powered platform</strong> used by <span class="hl">3,000+ teachers across 600+ schools</span>, owning 7+ modules and integrating AI-generated question papers and lesson plans, produced in 1–3 minutes, into the screens.</li>
+        <li>Built a <strong>school management app</strong> with dashboards for admins, principals, teachers, and students, and improved load time by roughly <span class="hl">10–25%</span> across both apps, including by lazy-loading the authentication SDK.</li>
+        <li>Released <strong>2 apps on Google Play and the App Store</strong>, including the company's first iOS app (1,000+ downloads on Google Play), and restored Play Store publishing for another by upgrading it.</li>
+        <li>Moved mobile builds from manual to <strong>automated pipelines</strong> and owned the iOS release process.</li>
+        <li>Also delivered a trip-time analysis tool for a mining fleet of 50–500 vehicles, a 30+ level puzzle game, and an internal analytics app for a client — and contributed backend code reviews.</li>
       </ul>
+      <div class="tl-stack">
+        <span class="stack-tag">Angular</span><span class="stack-tag">Ionic</span><span class="stack-tag">Nx</span><span class="stack-tag">AWS Cognito</span><span class="stack-tag">Bitbucket Pipelines</span>
+      </div>
+      <span class="tl-badge">★ Employee of the Month — July 2025</span>
     </div>
 
     <div class="tl-item fade-in">
-      <p class="tl-period">Apr 2023 — May 2024 &nbsp;·&nbsp; Virginia (Remote)</p>
-      <p class="tl-company">iWish Labs, Inc.</p>
-      <p class="tl-role">Angular Developer (Intern)</p>
+      <p class="tl-period">May 2024 — Dec 2024 &nbsp;·&nbsp; Remote</p>
+      <p class="tl-company">Yarasi Enterprises</p>
+      <p class="tl-role">Frontend Developer Intern → Frontend Engineer</p>
       <ul class="tl-bullets">
-        <li>Built <strong>TOT Master</strong> — a school bus tracking mobile app for parents and administrators — taking <strong>full ownership</strong> of the frontend from initial design to live data integration.</li>
-        <li>Integrated <strong>real-time data sync</strong> and user authentication, keeping the app responsive and secure.</li>
-        <li>Translated design mockups into <strong>pixel-accurate, responsive</strong> interfaces that worked across all major browsers.</li>
+        <li>Built the front end of a pre-launch <strong>social media platform</strong> designed to reduce fake content and keep what users see genuine.</li>
+        <li>Developed the <strong>mobile app for a startup-networking product</strong> that connects people in the startup ecosystem, which later launched on Google Play.</li>
+        <li>Built the company's documentation site using Jekyll.</li>
       </ul>
+      <div class="tl-stack">
+        <span class="stack-tag">Angular</span><span class="stack-tag">React Native (Expo)</span><span class="stack-tag">Jekyll</span>
+      </div>
+    </div>
+
+    <div class="tl-item fade-in">
+      <p class="tl-period">Apr 2023 — May 2024 &nbsp;·&nbsp; Remote</p>
+      <p class="tl-company">ToT Master (iWish Labs)</p>
+      <p class="tl-role">Angular Developer Intern</p>
+      <ul class="tl-bullets">
+        <li>Built the front end of an <strong>internal CRM dashboard</strong> that brings data from the company's driver, teacher, and parent apps into one view for the operations team, with TypeScript logic that shapes Firebase data for the screens.</li>
+        <li>Built a <strong>school-bus attendance app</strong> that lets drivers record each student's pick-up and drop-off.</li>
+      </ul>
+      <div class="tl-stack">
+        <span class="stack-tag">Angular</span><span class="stack-tag">Firebase</span>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- ─── SKILLS ─── -->
-<section id="skills">
-  <p class="section-label fade-in">Toolkit</p>
-  <h2 class="section-title fade-in">Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-group fade-in">
-      <p class="skill-group-name">Component Architecture</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Angular 17+</span>
-        <span class="skill-tag">Ionic 8</span>
-        <span class="skill-tag">Capacitor</span>
-        <span class="skill-tag">React Native</span>
-        <span class="skill-tag">Design Systems</span>
-        <span class="skill-tag">HTML5</span>
-        <span class="skill-tag">CSS3</span>
-      </div>
-    </div>
-    <div class="skill-group fade-in">
-      <p class="skill-group-name">State &amp; Data</p>
-      <div class="skill-tags">
-        <span class="skill-tag">RxJS</span>
-        <span class="skill-tag">Angular Signals</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">RESTful APIs</span>
-        <span class="skill-tag">D3.js</span>
-        <span class="skill-tag">Firestore</span>
-      </div>
-    </div>
-    <div class="skill-group fade-in">
-      <p class="skill-group-name">Systems &amp; Tools</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Nx Monorepo</span>
-        <span class="skill-tag">Azure API Mgmt</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">Figma</span>
-        <span class="skill-tag">Jira</span>
-        <span class="skill-tag">Linux</span>
-      </div>
-    </div>
-    <div class="skill-group fade-in">
-      <p class="skill-group-name">Languages &amp; Beyond</p>
-      <div class="skill-tags">
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Rust</span>
-        <span class="skill-tag">OpenCV</span>
-        <span class="skill-tag">Raspberry Pi</span>
-      </div>
-    </div>
+  <div class="edu-card fade-in">
+    <p class="skill-group-name">Education</p>
+    <p class="tl-company">B.Tech in Electronics and Communication Engineering</p>
+    <p class="stat-desc">Usha Rama College of Engineering and Technology, Vijayawada &nbsp;·&nbsp; 2019 — 2023</p>
   </div>
 </section>
 
@@ -1015,61 +1038,159 @@
         <span class="term-dot td-red"></span>
         <span class="term-dot td-yellow"></span>
         <span class="term-dot td-green"></span>
-        <span class="term-path">~/oaks/siya-ai</span>
+        <span class="term-path">~/side-projects/worklog-app</span>
       </div>
       <div class="project-body">
-        <p class="project-name">SIYA AI</p>
-        <p class="project-desc">AI-graded school assessment platform used by teachers across <strong>grades 6–12</strong>. As a <strong>core frontend engineer</strong>, I built the entire teacher-facing experience from scratch — everything from how content is created and organized to how it gets delivered to students.</p>
+        <p class="project-name">Worklog — Daily Work Journal</p>
+        <p class="project-desc">A multi-user web app I built and self-host for keeping a daily work journal, so entries can later feed self-reviews and resumes. I wrote the full backend: <strong>Argon2 password hashing</strong>, database-backed sessions, email verification and password reset, and a <strong>REST API where every query is scoped to the signed-in user</strong>. Deployed on a Linux server with systemd, Caddy (automatic HTTPS), and daily database backups kept for 14 days.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Node.js</span>
+          <span class="stack-tag">Express</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">Caddy</span>
+          <span class="stack-tag">Linux</span>
+        </div>
+        <div class="project-links">
+          <a href="https://worklog.tunitive.com" class="project-link" target="_blank" rel="noopener">↗ Live site</a>
+          <a href="https://github.com/Av1nag/worklog-app" class="project-link" target="_blank" rel="noopener">↗ Source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="term-bar">
+        <span class="term-dot td-red"></span>
+        <span class="term-dot td-yellow"></span>
+        <span class="term-dot td-green"></span>
+        <span class="term-path">~/client/enterprise-apis</span>
+      </div>
+      <div class="project-body">
+        <p class="project-name">Enterprise API Integration</p>
+        <p class="project-desc">Worked alongside an experienced Azure integration engineer on a client engagement, building <strong>10+ of the 60+ APIs</strong> that connect SAP, Salesforce, Coupa, ServiceNow, and other business systems. Wrote policies for authentication, data transformation, caching, and centralized logging, used versioning so changes didn't break existing users, and worked on pipelines that move changes from Dev to Test to Prod.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Azure API Management</span>
+          <span class="stack-tag">Azure DevOps</span>
+          <span class="stack-tag">REST APIs</span>
+          <span class="stack-tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="term-bar">
+        <span class="term-dot td-red"></span>
+        <span class="term-dot td-yellow"></span>
+        <span class="term-dot td-green"></span>
+        <span class="term-path">~/phenom/work-records</span>
+      </div>
+      <div class="project-body">
+        <p class="project-name">HR Attendance &amp; Work Records</p>
+        <p class="project-desc">Full-stack work on an HR platform used by <strong>1,200+ employees</strong>. Worked on the Django API that summarizes worked hours, expected hours, overtime, and shortfalls, and the React screens that show it — improving the accuracy of the attendance data everyone relies on, backed by <strong>80%+ test coverage</strong>.</p>
+        <div class="project-stack">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">Django</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">Vitest</span>
+          <span class="stack-tag">Docker</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="term-bar">
+        <span class="term-dot td-red"></span>
+        <span class="term-dot td-yellow"></span>
+        <span class="term-dot td-green"></span>
+        <span class="term-path">~/oaks/ai-teaching-platform</span>
+      </div>
+      <div class="project-body">
+        <p class="project-name">AI Teaching Platform</p>
+        <p class="project-desc">Front end of an AI-powered platform used by <strong>3,000+ teachers across 600+ schools</strong>. Owned 7+ modules and brought AI-generated question papers and lesson plans into the screens, plus a companion school management app — both shipped to <strong>Google Play and the App Store</strong> through automated build pipelines.</p>
         <div class="project-stack">
           <span class="stack-tag">Angular 17+</span>
-          <span class="stack-tag">Ionic</span>
-          <span class="stack-tag">Angular Signals</span>
-          <span class="stack-tag">Handlebars</span>
-          <span class="stack-tag">Nx Monorepo</span>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="project-card fade-in">
-      <div class="term-bar">
-        <span class="term-dot td-red"></span>
-        <span class="term-dot td-yellow"></span>
-        <span class="term-dot td-green"></span>
-        <span class="term-path">~/oaks/peekazoo</span>
-      </div>
-      <div class="project-body">
-        <p class="project-name">PEEKAZOO</p>
-        <p class="project-desc">Kids' edutainment mobile app for <strong>Android and iOS</strong>. Built the project from the ground up and became <strong>top contributor</strong> — shaping the core experience children interact with, from smooth content loading to the interactive gameplay that makes learning engaging.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Angular</span>
           <span class="stack-tag">Ionic 8</span>
           <span class="stack-tag">Capacitor</span>
-          <span class="stack-tag">Phaser</span>
           <span class="stack-tag">Nx Monorepo</span>
+          <span class="stack-tag">AWS Cognito</span>
         </div>
       </div>
     </div>
 
-    <div class="project-card fade-in">
-      <div class="term-bar">
-        <span class="term-dot td-red"></span>
-        <span class="term-dot td-yellow"></span>
-        <span class="term-dot td-green"></span>
-        <span class="term-path">~/hardware/welcoming-bot</span>
-      </div>
-      <div class="project-body">
-        <p class="project-name">Welcoming Bot</p>
-        <p class="project-desc">A motion-detecting bot that uses a camera to sense when someone walks in and automatically triggers a greeting. Built on Raspberry Pi with Python and computer vision — an experiment in making hardware and software work together.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Raspberry Pi</span>
-          <span class="stack-tag">Python</span>
-          <span class="stack-tag">OpenCV</span>
-          <span class="stack-tag">Computer Vision</span>
-        </div>
+  </div>
+</section>
+
+<!-- ─── SKILLS ─── -->
+<section id="skills">
+  <p class="section-label fade-in">Toolkit</p>
+  <h2 class="section-title fade-in">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-group fade-in">
+      <p class="skill-group-name">Frontend &amp; Mobile</p>
+      <div class="skill-tags">
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Angular 17+</span>
+        <span class="skill-tag">Ionic 8</span>
+        <span class="skill-tag">Capacitor</span>
+        <span class="skill-tag">React Native (Expo)</span>
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">SASS/SCSS</span>
+        <span class="skill-tag">Tailwind CSS</span>
       </div>
     </div>
-
+    <div class="skill-group fade-in">
+      <p class="skill-group-name">Backend &amp; APIs</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Django</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Express.js</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">Azure API Management</span>
+        <span class="skill-tag">Session-Based Auth</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <p class="skill-group-name">Databases &amp; Cloud</p>
+      <div class="skill-tags">
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Firebase / Firestore</span>
+        <span class="skill-tag">AWS Cognito</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <p class="skill-group-name">Languages</p>
+      <div class="skill-tags">
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <p class="skill-group-name">Tools &amp; DevOps</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">Caddy</span>
+        <span class="skill-tag">Nx</span>
+        <span class="skill-tag">Vite</span>
+        <span class="skill-tag">Bitbucket Pipelines</span>
+        <span class="skill-tag">Azure DevOps</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <p class="skill-group-name">Testing &amp; Quality</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Vitest</span>
+        <span class="skill-tag">Unit Testing</span>
+        <span class="skill-tag">SonarQube</span>
+        <span class="skill-tag">ESLint</span>
+        <span class="skill-tag">Chrome DevTools</span>
+        <span class="skill-tag">Code Reviews</span>
+      </div>
+    </div>
   </div>
 </section>
 
