@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Avinag Udayagiri, full-stack developer building web and mobile apps with React, Angular, Django, Node.js, and PostgreSQL.">
   <title>Avinag Udayagiri, Full-Stack Developer</title>
-  <meta name="theme-color" content="#F0F0EF" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1A1A1B" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#EEF1F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171B21" media="(prefers-color-scheme: dark)">
   <script>
     // Apply a saved theme before first paint so there's no flash
     try {
@@ -24,21 +24,21 @@
       padding: 0;
     }
 
-    /* Graphite: neutral, low-glare greys. Light is the default. */
+    /* Slate blue: cool, low-glare blue-greys. Light is the default. */
     :root {
       color-scheme: light;
-      --bg:       #F0F0EF;
-      --surface:  #F7F7F6;
-      --ink:      #222222;
-      --ink-2:    #4E4E4E;
-      --ink-3:    #646464;
-      --rule:     #D6D6D5;
-      --layer-1:  #E4E4E3;
-      --layer-2:  #DADAD9;
-      --layer-3:  #D0D0CF;
-      --layer-4:  #C7C7C6;
-      --accent:   #3A3A3A;
-      --on-accent:#F0F0EF;
+      --bg:      #EEF1F4;
+      --surface: #F6F8FA;
+      --ink:     #1E2630;
+      --ink-2:   #46525F;
+      --ink-3:   #56616F;
+      --rule:    #D5DCE3;
+      --layer-1: #E1E7ED;
+      --layer-2: #D7DFE7;
+      --layer-3: #CDD7E1;
+      --layer-4: #C4CFDA;
+      --accent:  #34587A;
+      --on-accent: #F2F5F8;
 
       --font: 'Schibsted Grotesk', system-ui, sans-serif;
 
@@ -55,38 +55,38 @@
       --gutter: clamp(1rem, 4vw, 2.5rem);
     }
 
-    /* Dark theme: graphite, never pure black */
+    /* Dark theme: deep slate, never pure black */
     :root[data-theme="dark"] {
       color-scheme: dark;
-      --bg:       #1A1A1B;
-      --surface:  #1F1F20;
-      --ink:      #E0E0DF;
-      --ink-2:    #ABABAA;
-      --ink-3:    #8E8E8D;
-      --rule:     #2C2C2D;
-      --layer-1:  #232324;
-      --layer-2:  #2A2A2B;
-      --layer-3:  #303031;
-      --layer-4:  #373738;
-      --accent:   #D0D0CE;
-      --on-accent:#1A1A1B;
+      --bg:      #171B21;
+      --surface: #1C2128;
+      --ink:     #DCE2EA;
+      --ink-2:   #A7B2C0;
+      --ink-3:   #8B96A4;
+      --rule:    #2A313B;
+      --layer-1: #1F252D;
+      --layer-2: #252C35;
+      --layer-3: #2B333D;
+      --layer-4: #323A45;
+      --accent:  #93B4D6;
+      --on-accent: #141A21;
     }
 
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
         color-scheme: dark;
-        --bg:       #1A1A1B;
-        --surface:  #1F1F20;
-        --ink:      #E0E0DF;
-        --ink-2:    #ABABAA;
-        --ink-3:    #8E8E8D;
-        --rule:     #2C2C2D;
-        --layer-1:  #232324;
-        --layer-2:  #2A2A2B;
-        --layer-3:  #303031;
-        --layer-4:  #373738;
-        --accent:   #D0D0CE;
-        --on-accent:#1A1A1B;
+        --bg:      #171B21;
+        --surface: #1C2128;
+        --ink:     #DCE2EA;
+        --ink-2:   #A7B2C0;
+        --ink-3:   #8B96A4;
+        --rule:    #2A313B;
+        --layer-1: #1F252D;
+        --layer-2: #252C35;
+        --layer-3: #2B333D;
+        --layer-4: #323A45;
+        --accent:  #93B4D6;
+        --on-accent: #141A21;
       }
     }
 
@@ -148,8 +148,8 @@
       gap: 1.75rem;
     }
 
-    .menu-btn,
-    .theme-btn {
+    .menu-btn {
+      display: none;
       background: none;
       border: 1px solid var(--rule);
       border-radius: 4px;
@@ -160,10 +160,37 @@
       cursor: pointer;
     }
 
-    .menu-btn { display: none; }
-
-    .theme-btn:hover,
     .menu-btn:hover { border-color: var(--ink-3); }
+
+    /* Light / dark / system switch */
+    .theme-switch {
+      display: inline-flex;
+      gap: 2px;
+      padding: 2px;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+    }
+
+    .theme-switch button {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 28px;
+      background: none;
+      border: none;
+      border-radius: 4px;
+      color: var(--ink-3);
+      cursor: pointer;
+    }
+
+    .theme-switch button:hover { color: var(--ink); }
+
+    .theme-switch button[aria-pressed="true"] {
+      background: var(--layer-2);
+      color: var(--ink);
+    }
+
+    .theme-switch svg { width: 16px; height: 16px; }
 
     /* ─── HERO ─── */
     .hero {
@@ -534,7 +561,17 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="theme-btn" id="themeBtn" type="button">Dark</button>
+      <div class="theme-switch" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-choice="light" aria-label="Light theme" title="Light">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <button type="button" data-theme-choice="system" aria-label="Match system theme" title="System">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </button>
+        <button type="button" data-theme-choice="dark" aria-label="Dark theme" title="Dark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
       <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
     </div>
   </nav>
@@ -756,29 +793,32 @@
 </footer>
 
 <script>
-  // Theme toggle: follows the system until the visitor picks one
-  const themeBtn = document.getElementById('themeBtn');
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  // Theme switch: light, dark, or follow the system (the default)
+  const themeButtons = document.querySelectorAll('[data-theme-choice]');
 
-  function currentTheme() {
-    return document.documentElement.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+  function setTheme(choice) {
+    if (choice === 'system') {
+      delete document.documentElement.dataset.theme;
+      try { localStorage.removeItem('theme'); } catch (e) {}
+    } else {
+      document.documentElement.dataset.theme = choice;
+      try { localStorage.setItem('theme', choice); } catch (e) {}
+    }
+    syncThemeButtons();
   }
 
-  function syncThemeBtn() {
-    const next = currentTheme() === 'dark' ? 'light' : 'dark';
-    themeBtn.textContent = next === 'dark' ? 'Dark' : 'Light';
-    themeBtn.setAttribute('aria-label', `Switch to ${next} theme`);
+  function syncThemeButtons() {
+    const choice = document.documentElement.dataset.theme || 'system';
+    themeButtons.forEach(btn => {
+      btn.setAttribute('aria-pressed', btn.dataset.themeChoice === choice);
+    });
   }
 
-  themeBtn.addEventListener('click', () => {
-    const next = currentTheme() === 'dark' ? 'light' : 'dark';
-    document.documentElement.dataset.theme = next;
-    try { localStorage.setItem('theme', next); } catch (e) {}
-    syncThemeBtn();
+  themeButtons.forEach(btn => {
+    btn.addEventListener('click', () => setTheme(btn.dataset.themeChoice));
   });
 
-  systemDark.addEventListener('change', syncThemeBtn);
-  syncThemeBtn();
+  syncThemeButtons();
 
   // Mobile menu
   const menuBtn = document.getElementById('menuBtn');
