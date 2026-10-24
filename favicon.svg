@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- The hero stack in miniature: four layers stepping inward -->
+  <rect width="32" height="32" rx="6" fill="#34587A"/>
+  <rect x="6"    y="6.5"  width="20"   height="3.5" fill="#EEF1F4"/>
+  <rect x="8.5"  y="12"   width="17.5" height="3.5" fill="#EEF1F4" opacity="0.88"/>
+  <rect x="11"   y="17.5" width="15"   height="3.5" fill="#EEF1F4" opacity="0.76"/>
+  <rect x="13.5" y="23"   width="12.5" height="3.5" fill="#EEF1F4" opacity="0.64"/>
+</svg>
